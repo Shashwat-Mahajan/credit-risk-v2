@@ -29,7 +29,9 @@ app = FastAPI()
 # ✅ CORS middleware add karo
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # development ke liye sab allow
+    allow_origins=[
+        "https://frontend-credit-risk-model.vercel.app/"
+    ],  # development ke liye sab allow
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
