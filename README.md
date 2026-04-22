@@ -1,62 +1,89 @@
-🚀 Credit Default Prediction API
+# 🚀 Credit Default Prediction API
 
 Production-ready Machine Learning API to predict loan default risk using FastAPI + Docker + CI/CD
 
-💡 Overview
+---
 
-This project is a Credit Risk Prediction System that predicts whether a borrower is likely to default on a loan.
+## 💡 Overview
 
-It includes:
+This project is a **Credit Risk Prediction System** that predicts whether a borrower is likely to default on a loan.
 
-📊 Data preprocessing & feature engineering
-🤖 ML model training (Logistic Regression, XGBoost)
-⚖️ Class imbalance handling (SMOTE + Tomek)
-📈 Model evaluation (ROC-AUC, KS, Gini)
-🚀 Deployment using FastAPI + Docker
-🏗️ Project Structure
+### It includes:
+- 📊 Data preprocessing & feature engineering
+- 🤖 ML model training (Logistic Regression, XGBoost)
+- ⚖️ Class imbalance handling (SMOTE + Tomek)
+- 📈 Model evaluation (ROC-AUC, KS, Gini)
+- 🚀 Deployment using FastAPI + Docker
+
+---
+
+## 🏗️ Project Structure
+
+```bash
+
 .
 ├── .github/workflows/       # CI/CD pipelines
 │
 ├── app/
 │   ├── artifacts/
-│   │   └── model_data.joblib
+│   │   └── model_data.joblib   # Trained model + scaler + features
 │   │
 │   ├── __init__.py
-│   ├── main.py
-│   └── prediction_helper.py
+│   ├── main.py                # FastAPI entry point
+│   └── prediction_helper.py  # Prediction logic
 │
 ├── .gitignore
 ├── Dockerfile
 ├── requirements.txt
 └── README.md
-🧠 Key Features
-Predicts loan default probability
-Pre-trained ML model (saved as .joblib)
-Clean API structure using FastAPI
-Modular prediction pipeline
-Dockerized deployment
-CI/CD ready
-📊 Model Details
-🎯 Target Variable
+```
+
+---
+
+## 🧠 Key Features
+
+- Predicts loan default probability
+- Pre-trained ML model (saved as .joblib)
+- Clean API structure using FastAPI
+- Modular prediction pipeline
+- Dockerized for easy deployment
+- CI/CD ready
+
+---
+
+## 📊 Model Details
+
+### 🎯 Target Variable
 default
-0 → No Default
-1 → Default
-🔍 Input Features
-👤 Customer Information
-Age
-Income
-Residence Type (Owned / Rented / Mortgage)
-💳 Credit Information
-Credit Utilization
-Number of Open Accounts
-Average DPD
-Delinquency Ratio
-💰 Loan Information
-Loan Amount
-Loan Tenure (Months)
-Loan Purpose (Home / Education / Personal / Auto)
-Loan Type (Secured / Unsecured)
-📥 Example API Request
+- 0 → No Default
+- 1 → Default
+
+---
+
+## 🔍 Input Features
+
+### 👤 Customer Information
+- Age
+- Income
+- Residence Type (Owned / Rented / Mortgage)
+
+### 💳 Credit Information
+- Credit Utilization
+- Number of Open Accounts
+- Average DPD
+- Delinquency Ratio
+
+### 💰 Loan Information
+- Loan Amount
+- Loan Tenure (Months)
+- Loan Purpose (Home / Education / Personal / Auto)
+- Loan Type (Secured / Unsecured)
+
+---
+
+## 📥 Example API Request
+
+```json
 {
   "age": 32,
   "income": 750000,
@@ -70,64 +97,111 @@ Loan Type (Secured / Unsecured)
   "loan_purpose": "Personal",
   "loan_type": "Unsecured"
 }
-📤 Example Response
+```
+---
+
+## 📤 Example Response
+```json
 {
   "default_probability": 0.23,
   "prediction": "Low Risk"
 }
-🧾 Model Artifact
+```
+
+---
+
+## 🧾 Model Artifact
 
 The trained model is stored here:
 
 app/artifacts/model_data.joblib
 
-It contains:
+### It contains:
+- Trained ML model
+- Feature list
+- Scaler
 
-Trained ML model
-Feature list
-Scaler
-⚙️ Installation & Setup
-1️⃣ Clone Repository
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone Repo
+```json
 git clone https://github.com/your-username/credit-default-api.git
 cd credit-default-api
-2️⃣ Install Dependencies
+```
+
+### 2️⃣ Install Dependencies
+```json
 pip install -r requirements.txt
-3️⃣ Run FastAPI Server
+```
+
+### 3️⃣ Run FastAPI Server
+```json
 uvicorn app.main:app --reload
-4️⃣ Open API Docs
+```
+
+### 4️⃣ Open API Docs
+```json
 http://127.0.0.1:8000/docs
-🐳 Run with Docker
-Build Image
+```
+
+---
+
+## 🐳 Run with Docker
+
+### Build Image
+```json
 docker build -t credit-risk-api .
-Run Container
+```
+
+### Run Container
+```json
 docker run -p 8000:8000 credit-risk-api
-🔁 CI/CD
+```
+
+---
+
+## 🔁 CI/CD
 
 Located in:
-
+```json
 .github/workflows/
+```
 
 Includes:
+- Automated builds
+- Testing pipelines
+- Deployment workflows
 
-Automated builds
-Testing pipelines
-Deployment workflows
-📈 Model Performance
-Metric	Value
-Accuracy	93%
-Recall (Default)	94%
-F1 Score	0.70
-ROC-AUC	0.98
-Gini	0.96
-⚡ Future Improvements
-Add SHAP explainability
-Add authentication (JWT)
-Deploy on AWS/GCP
-Add frontend dashboard
-👨‍💻 Author
+---
+
+## 📈 Model Performance
+```json
+Accuracy: 93%  
+Recall (Default): 94%  
+F1 Score: 0.70  
+ROC-AUC: 0.98  
+Gini: 0.96
+```
+
+---
+
+## ⚡ Future Improvements
+
+- Add SHAP explainability
+- Add authentication layer (JWT)
+- Deploy on cloud (AWS/GCP)
+- Add frontend dashboard
+
+---
+
+## 👨‍💻 Author
 
 Shashwat
 
-⭐ Support
+---
+
+## ⭐ Support
 
 If this project helped you, give it a ⭐ on GitHub 🚀
