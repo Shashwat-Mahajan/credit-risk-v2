@@ -19,11 +19,11 @@ It includes:
 │
 ├── app/
 │   ├── artifacts/
-│   │   └── model_data.joblib   # Trained model + scaler + features
+│   │   └── model_data.joblib
 │   │
 │   ├── __init__.py
-│   ├── main.py                # FastAPI entry point
-│   └── prediction_helper.py  # Prediction logic
+│   ├── main.py
+│   └── prediction_helper.py
 │
 ├── .gitignore
 ├── Dockerfile
@@ -34,7 +34,7 @@ Predicts loan default probability
 Pre-trained ML model (saved as .joblib)
 Clean API structure using FastAPI
 Modular prediction pipeline
-Dockerized for easy deployment
+Dockerized deployment
 CI/CD ready
 📊 Model Details
 🎯 Target Variable
@@ -87,7 +87,7 @@ Trained ML model
 Feature list
 Scaler
 ⚙️ Installation & Setup
-1️⃣ Clone Repo
+1️⃣ Clone Repository
 git clone https://github.com/your-username/credit-default-api.git
 cd credit-default-api
 2️⃣ Install Dependencies
@@ -121,8 +121,8 @@ ROC-AUC	0.98
 Gini	0.96
 ⚡ Future Improvements
 Add SHAP explainability
-Add authentication layer (JWT)
-Deploy on cloud (AWS/GCP)
+Add authentication (JWT)
+Deploy on AWS/GCP
 Add frontend dashboard
 👨‍💻 Author
 
