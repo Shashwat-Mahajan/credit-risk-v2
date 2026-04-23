@@ -26,12 +26,11 @@ class CreditRiskOutput(BaseModel):
 
 app = FastAPI()
 
-# ✅ CORS middleware add karo
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://frontend-credit-risk-model.vercel.app"
-    ],  # development ke liye sab allow
+        "https://frontend-credit-risk-model-cbus4tib5.vercel.app/"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
