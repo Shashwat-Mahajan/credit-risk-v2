@@ -29,7 +29,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://frontend-credit-risk-model-cbus4tib5.vercel.app/"
+        "https://frontend-credit-risk-model-cbus4tib5.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
